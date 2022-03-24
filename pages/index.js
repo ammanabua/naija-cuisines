@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Featured from '../components/Featured'
+import FoodList from '../components/FoodList'
 import styles from '../styles/Home.module.css'
 
 
@@ -14,6 +15,7 @@ export default function Home() {
       </Head>
 
       <Featured />
+      <FoodList />
     </div>
   )
 }
