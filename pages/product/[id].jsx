@@ -50,6 +50,14 @@ const Product = () => {
                     <input type="checkbox" id="extra-spicy" name="extra-spicy" className={styles.checkbox} />
                     <label htmlFor="extra-spicy">Plenty Pepper</label>
                 </div>
+                <div className={styles.option}>
+                    <input type="checkbox" id="moi-moi" name="moi-moi" className={styles.checkbox} />
+                    <label htmlFor="moi-moi">Moi-moi</label>
+                </div>
+                <div className={styles.option}>
+                    <input type="checkbox" id="coleslaw" name="coleslaw" className={styles.checkbox} />
+                    <label htmlFor="coleslaw">Coleslaw</label>
+                </div>
             </div>
             <div className={styles.add}>
                 <input type="number" defaultValue={1} className={styles.quantity} />
