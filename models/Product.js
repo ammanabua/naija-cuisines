@@ -11,12 +11,6 @@ const ProductSchema = new mongoose.Schema({
     desc: {
         type: String,
         required: true,
-        maxlength: 60,
-    },
-
-    img: {
-        type: String,
-        required: true,
         maxlength: 200,
     },
 
@@ -38,3 +32,6 @@ const ProductSchema = new mongoose.Schema({
     }
 }, {timestamps: true}
 );
+
+
+export default mongoose.models.Product || mongoose.model("Product", ProductSchema);
