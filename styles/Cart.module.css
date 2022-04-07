@@ -46,6 +46,7 @@
     flex-direction: column;
     justify-content: space-between;
     color: white;
+    border-radius: 5px;
 }
 
 .totalTextTitle{
@@ -117,6 +118,29 @@
         width: 100%;
     }
 
+}
+
+.paymentMethods {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.payButton {
+    padding: 10px 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    background-color: white;
+    color: teal;
+    font-weight: bold;
+    width: 100%;
+}
+
+.paystackButton {
+    padding: 10px 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    width: 100%;
 }
 
 
