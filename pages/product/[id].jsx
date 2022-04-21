@@ -18,7 +18,7 @@ const Product = ({ food }) => {
     }
 
     const handleSize = (sizeIndex) => {
-        const difference = food.prices[sizeIndex] - pizza.price[size];
+        const difference = food.prices[sizeIndex] - food.prices[size];
         setSize(sizeIndex);
         changePrice(difference);
     }

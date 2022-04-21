@@ -4,24 +4,55 @@ import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 
 import { usePaystackPayment } from "react-paystack";
+import { useRouter } from "next/router";
+import { reset } from "../redux/cartSlice"
+import OrderDetail from "../components/OrderDetail";
 
 
 const Cart = () => {
 
     const [open, setOpen] = useState(false);
+    const [cash, setCash] = useState(false);
+
+
+    
+    const dispatch = useDispatch();
+    const cart = useSelector(state => state.cart);
+    const router = useRouter()
+
+    const createOrder = async (data) => {
+        try{
+            const res = axios.post("http://localhost:3000/api/orders", data)
+
+            res.status === 201 && router.push("/orders/" + res.data._id)
+            dispatch(reset())
+        } catch(err) {
+            console.log(err)
+        }
+    }
 
 
     //PAYSTACK HOOK IMPLEMENTATION
     const config = {
         reference: (new Date()).getTime().toString(),
         email: "user@example.com",
-        amount: 20000,
+        amount: cart.total,
         publicKey: 'pk_test_687a8ebd710403b4c2f5383c6c027d896bd074dc',
     };
     
     // you can call this function anything
     const onSuccess = (reference) => {
       // Implementation for whatever you want to do with reference and after success call.
+        // const shipping
+
+        createOrder({
+            customer:shipping.name.full_name,
+            address: shipping.address.address_line_1,
+            total: cart.total,
+            method: 1
+        
+        })
+
       console.log(reference);
     };
   
@@ -37,50 +68,50 @@ const Cart = () => {
     //END OF PAYSTACK HOOK IMPLEMENTATION
 
 
-    const dispatch = useDispatch();
-    const cart = useSelector(state => state.cart);
-
-
   return (
     <div className={styles.container}>
         <div className={styles.left}>
             <table className={styles.table}>
-                <tr className={styles.trTitle}>
-                    <th>Product</th>
-                    <th>Name</th>
-                    <th>Extras</th>
-                    <th>Price</th>
-                    <th>Quantity</th>
-                    <th>Total</th>
-                </tr>
-                {cart.products.map((product) => (
-                    <tr className={styles.tr} key={product._id}>
-                        <td>
-                            <div className={styles.imgContainer}>
-                                <Image src={product.img} layout="fill" objectFit="cover" alt="" />
-                            </div>
-                        </td>
-                        <td>
-                            <span className={styles.name}>{product.title}</span>
-                        </td>
-                        <td>
-                            <span className={styles.extras}>
-                                {product.extras.map((extra) => (
-                                    <span key={extra._id}>{extra.text}</span>
-                                ))}
-                            </span>
-                        </td>
-                        <td>
-                            <span className={styles.price}>{product.price}</span>
-                        </td>
-                        <td>
-                            <span className={styles.quantity}>{product.quantity}</span>
-                        </td>
-                        <td>
-                            <span className={styles.total}>{product.price * product.quantity}</span>
-                        </td>
+                <tbody>
+                    <tr className={styles.trTitle}>
+                        <th>Product</th>
+                        <th>Name</th>
+                        <th>Extras</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
                     </tr>
-                ))}
+                </tbody>
+                <tbody>
+                    {cart.products.map((product) => (
+                        <tr className={styles.tr} key={product._id}>
+                            <td>
+                                <div className={styles.imgContainer}>
+                                    <Image src={product.img} layout="fill" objectFit="cover" alt="" />
+                                </div>
+                            </td>
+                            <td>
+                                <span className={styles.name}>{product.title}</span>
+                            </td>
+                            <td>
+                                <span className={styles.extras}>
+                                    {product.extras.map((extra) => (
+                                        <span key={extra._id}>{extra.text}</span>
+                                    ))}
+                                </span>
+                            </td>
+                            <td>
+                                <span className={styles.price}>{product.price}</span>
+                            </td>
+                            <td>
+                                <span className={styles.quantity}>{product.quantity}</span>
+                            </td>
+                            <td>
+                                <span className={styles.total}>{product.price * product.quantity}</span>
+                            </td>
+                        </tr>
+                    ))}
+                </tbody>
             </table>
         </div>
         <div className={styles.right}>
@@ -106,7 +137,7 @@ const Cart = () => {
                                 initializePayment(onSuccess, onClose)
                             }}>Paystack</button>
 
-                            <button className={styles.payButton}>Cash on Delivery</button>
+                            <button className={styles.payButton} onClick={() => setCash(true)}>Cash on Delivery</button>
                         </div>
                     ) : (
                         <button onClick={() => setOpen(true)} className={styles.button}>CHECKOUT</button>
@@ -114,8 +145,11 @@ const Cart = () => {
                 </div>
             </div>
         </div>
+        {cash && (
+            <OrderDetail total={cart.total} createOrder={createOrder} />
+        )}
     </div>
-  )
-}
+  );
+};
 
 export default Cart
