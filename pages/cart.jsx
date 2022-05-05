@@ -2,6 +2,7 @@ import styles from "../styles/Cart.module.css"
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
+import axios from "axios";
 
 import { usePaystackPayment } from "react-paystack";
 import { useRouter } from "next/router";
@@ -10,22 +11,23 @@ import OrderDetail from "../components/OrderDetail";
 
 
 const Cart = () => {
-
+    
+    const cart = useSelector((state) => state.cart);
     const [open, setOpen] = useState(false);
     const [cash, setCash] = useState(false);
 
 
-    
     const dispatch = useDispatch();
-    const cart = useSelector(state => state.cart);
     const router = useRouter()
 
     const createOrder = async (data) => {
         try{
-            const res = axios.post("http://localhost:3000/api/orders", data)
+            const res = await axios.post("http://localhost:3000/api/orders", data);
 
-            res.status === 201 && router.push("/orders/" + res.data._id)
-            dispatch(reset())
+            if (res.status === 201) {
+                dispatch(reset());
+                router.push(`/orders/${res.data._id}`)
+            }
         } catch(err) {
             console.log(err)
         }
@@ -43,13 +45,22 @@ const Cart = () => {
     // you can call this function anything
     const onSuccess = (reference) => {
       // Implementation for whatever you want to do with reference and after success call.
-        // const shipping
+        const shipping = {
+            name:{
+                full_name: "Jimmy Carter"
+            },
+            address: {
+                address_line_1: "Ezimba Street"
+            }
+        }
+        console.log(reference);
 
         createOrder({
             customer:shipping.name.full_name,
             address: shipping.address.address_line_1,
+            phone: "09059646709",
             total: cart.total,
-            method: 1
+            method: 0,
         
         })
 
@@ -87,7 +98,7 @@ const Cart = () => {
                         <tr className={styles.tr} key={product._id}>
                             <td>
                                 <div className={styles.imgContainer}>
-                                    <Image src={product.img} layout="fill" objectFit="cover" alt="" />
+                                    <Image className={styles.img} src={product.img} layout="fill" objectFit="cover" alt="" />
                                 </div>
                             </td>
                             <td>

@@ -8,7 +8,7 @@ const OrderDetail = ({ total, createOrder }) => {
     const [telephone, setTelephone] = useState("");
 
     const handleClick = () => {
-        createOrder({ customer, address, total, method: 0 });
+        createOrder({ customer, address, total, method: 1 });
     }
 
   return (

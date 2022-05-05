@@ -21,7 +21,9 @@ const Navbar = () => {
 
       <div className={styles.item}>
         <ul className={styles.list}>
-          <li className={styles.listItem}>Home</li>
+          <Link href="/" passHref>
+            <li className={styles.listItem}>Home</li>
+          </Link>
           <li className={styles.listItem}>Products</li>
           <Image src="/img/taval-logo.png" alt="" width="90" height="90" />
           <li className={styles.listItem}>Menu</li>
