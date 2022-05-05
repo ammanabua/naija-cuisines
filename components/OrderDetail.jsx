@@ -5,10 +5,10 @@ const OrderDetail = ({ total, createOrder }) => {
 
     const [customer, setCustomer] = useState("");
     const [address, setAddress] = useState("");
-    const [telephone, setTelephone] = useState("");
+    const [phone, setPhone] = useState("");
 
     const handleClick = () => {
-        createOrder({ customer, address, total, method: 1 });
+        createOrder({ customer, phone, address, total, method: 1 });
     }
 
   return (
@@ -30,7 +30,7 @@ const OrderDetail = ({ total, createOrder }) => {
                     type="text" 
                     placeholder='08033945687' 
                     className={styles.input} 
-                    onChange={(e) => setTelephone(e.target.value)} 
+                    onChange={(e) => setPhone(e.target.value)} 
                 />
             </div>
             <div className={styles.item}>
