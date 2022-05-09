@@ -64,7 +64,7 @@ const Index = ({ orders, products }) => {
                             <td>{product._id.slice(0,5)}...</td>
                             <td>{product.title}</td>
                             <td>{product.prices[0]}</td>
-                            <td>
+                            <td> 
                                 <button className={styles.button}>Edit</button>
                                 <button onClick={() => handleDelete(product._id)} className={styles.button}>Delete</button>
                             </td>
@@ -111,7 +111,17 @@ const Index = ({ orders, products }) => {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getServerSideProps = async (ctx) => {
+    const myCookie = ctx.req?.cookies || "";
+
+    if(myCookie.token !== process.env.TOKEN){
+        return{
+            redirect:{
+                destination: "/admin/login",
+                permanent: false,
+            }
+        }
+    }
     const productRes = await axios.get("http://localhost:3000/api/products");
 
     const orderRes = await axios.get("http://localhost:3000/api/orders");
