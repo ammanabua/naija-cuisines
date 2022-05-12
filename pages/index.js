@@ -1,12 +1,18 @@
 import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react'
+import Add from '../components/Add'
+import AddButton from '../components/AddButton'
 import Featured from '../components/Featured'
 import FoodList from '../components/FoodList'
 import styles from '../styles/Home.module.css'
 
 
 export default function Home({ foodList, admin }) {
+
+  const [close, setClose] = useState(true);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -16,8 +22,9 @@ export default function Home({ foodList, admin }) {
       </Head>
 
       <Featured />
-      {admin && <span>Hello</span>}
+      {admin && <AddButton setClose={setClose} />}
       <FoodList foodList={foodList} />
+      {!close && <Add setClose={setClose} />}
     </div>
   )
 }
