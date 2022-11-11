@@ -38,7 +38,7 @@ const Cart = () => {
     const config = {
         reference: (new Date()).getTime().toString(),
         email: "user@example.com",
-        amount: cart.total,
+        amount: cart.total * 100,
         publicKey: 'pk_test_687a8ebd710403b4c2f5383c6c027d896bd074dc',
     };
     
