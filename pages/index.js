@@ -25,6 +25,8 @@ export default function Home({ foodList, admin }) {
       {admin && <AddButton setClose={setClose} />}
       <FoodList foodList={foodList} />
       {!close && <Add setClose={setClose} />}
+
+      
     </div>
   )
 }
