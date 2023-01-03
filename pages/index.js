@@ -2,6 +2,7 @@ import axios from 'axios'
 import Head from 'next/head'
 import Image from 'next/image'
 import { useState } from 'react'
+import About from '../components/About'
 import Add from '../components/Add'
 import AddButton from '../components/AddButton'
 import Featured from '../components/Featured'
@@ -23,12 +24,16 @@ export default function Home({ foodList, admin }) {
       </Head>
 
       <Featured />
+
+      <About />
+
+      <Services />
       {admin && <AddButton setClose={setClose} />}
       <FoodList foodList={foodList} />
       {!close && <Add setClose={setClose} />}
 
-      <Services />
       
+
     </div>
   )
 }

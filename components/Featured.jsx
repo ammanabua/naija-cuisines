@@ -52,7 +52,7 @@ const Featured = () => {
                 We offer the best meals <span className={styles.tav}>catered</span> to your satisfaction
             </h1>
             <Link href="/" passHref>
-                <button className={styles.btn}>ORDER</button>
+                <button className={styles.btn}><span>Order </span></button>
             </Link>
         </div>
 

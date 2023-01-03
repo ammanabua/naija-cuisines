@@ -18,7 +18,7 @@ const Services = () => {
                         </Link> 
                     </div>
                     <div className={styles.title}>
-
+                        <h3>Meal Delivery</h3>
                     </div>
                 </div>
                 <div className={styles.serviceItem}>
@@ -28,7 +28,7 @@ const Services = () => {
                         </Link> 
                     </div>
                     <div className={styles.title}>
-
+                        <h3>Event Management</h3>
                     </div>
                 </div>
                 <div className={styles.serviceItem}>
@@ -38,7 +38,7 @@ const Services = () => {
                         </Link> 
                     </div>
                     <div className={styles.title}>
-
+                        <h3>Catering & Outdoor Services</h3>
                     </div>
                 </div>
             </div>

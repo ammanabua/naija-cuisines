@@ -27,5 +27,9 @@
 }
 
 .img {
+    position: relative;
+}
 
+.title {
+    color: white;
 }

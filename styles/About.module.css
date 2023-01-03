@@ -1,0 +1,21 @@
+.container {
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+
+.wrapper{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.left{
+    flex: 3;
+}
+
+.right{
+    flex: 3;
+}
