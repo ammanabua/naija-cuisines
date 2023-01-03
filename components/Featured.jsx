@@ -1,5 +1,6 @@
 import styles from "../styles/Featured.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const images = [
@@ -7,6 +8,10 @@ const images = [
     "/img/featured2.jpg",
     "/img/featured3.jpg",
     "/img/featured4.jpg",
+]
+
+const title = [
+    ""
 ]
 
 const Featured = () => {
@@ -40,6 +45,15 @@ const Featured = () => {
                         <Image src={img} alt="" layout='fill' objectFit="cover" />
                 </div>
             ))}
+        </div>
+
+        <div className={styles.hero}>
+            <h1>
+                We offer the best meals <span className={styles.tav}>catered</span> to your satisfaction
+            </h1>
+            <Link href="/" passHref>
+                <button className={styles.btn}>ORDER</button>
+            </Link>
         </div>
 
         <div className={styles.arrowContainer} style={{ right: 0}} onClick={() => handleArrow("r")}>

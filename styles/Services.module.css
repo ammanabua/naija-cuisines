@@ -1,0 +1,31 @@
+.container {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0f0e17;
+}
+
+.wrapper{
+    width: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header{
+    color: white;
+}
+
+.img {
+
+}

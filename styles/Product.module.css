@@ -1,6 +1,10 @@
+
+
 .container {
     height: calc(100vh - 100px);
     display: flex;
+    padding-top: 150px;
+    margin-bottom: 100px;
 }
 
 .left{
@@ -41,6 +45,10 @@
     height: 30px;
     position: relative;
     cursor: pointer;
+}
+
+.size:active {
+    background-color: black;
 }
 
 .size:nth-child(2){
@@ -87,16 +95,19 @@
 .quantity{
     width: 50px;
     height: 30px;
+    border: none;
 }
 
 .button {
-    height: 30px;
+    height: 40px;
+    width: 150px;
     margin-left: 10px;
-    background-color: #EC770A;
+    background-color: #00CC66;
     color: white;
     border: none;
     font-weight: 500;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 @media screen and (max-width: 480px) {
