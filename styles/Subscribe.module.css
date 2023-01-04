@@ -1,0 +1,49 @@
+.container {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    background-color: #fafafa;
+    margin: 50px 0;
+}
+
+.wrapper {
+    height: 50vh;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    
+}
+
+.title{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.inputForm{
+    text-align: center;
+    padding: 20px;
+}
+
+.input {
+    font-size: 18px;
+    width: 30vw;
+    height: 40px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: yellow;
+}
+
+.btn {
+    height: 40px;
+    width: 100px;
+    font-family: inherit;
+    background-color: black;
+    color: white;
+}

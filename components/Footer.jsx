@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
       <div className={styles.bottom}>
         <div className={styles.footer}>
-          Copyright &copy; Taval Cuisiniere 2023
+          Copyright &copy; Taval Cuisiniere <sup>&reg;</sup> 2023
         </div>
       </div>
     </div>
