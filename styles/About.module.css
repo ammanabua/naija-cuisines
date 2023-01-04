@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+
+
 .container {
     height: 100vh;
     display: flex;
     position: relative;
+    width: 70%;
+    margin: auto;
 }
 
 
@@ -13,9 +18,49 @@
 }
 
 .left{
-    flex: 3;
+    margin-right: 20px;
+    width: 100%
 }
 
+
 .right{
-    flex: 3;
+    margin-left: 20px;
+    width: 80%;
+}
+
+.img{
+    position: relative;
+    height: 800px;
+    border-radius: 12px;
+}
+
+.article {
+ height: 500px;
+ justify-content: space-evenly;
+ display: flex;
+ flex-direction: column;
+ padding: 10px;;
+}
+
+.articleHead {
+    font-size: 48px;
+    font-family: 'Arizonia', cursive;
+}
+
+.text {
+    margin-bottom: 50px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    background-color: #F9A620;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: none;
 }
