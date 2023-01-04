@@ -49,7 +49,7 @@ const Product = ({ food }) => {
         </div>
         <div className={styles.right}>
             <h1 className={styles.title}>{food.title}</h1>
-            <span className={styles.price}>N{price}</span>
+            <span className={styles.price}>&#8358; {price}</span>
             <p className={styles.desc}>{food.desc}</p>
             <h3 className={styles.choose}>Choose your size</h3>
             <div className={styles.sizes}>

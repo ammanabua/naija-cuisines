@@ -10,7 +10,7 @@ const Subscribe = () => {
                     Subscribe to our newsletter and stay on top of new deals!
                 </div>
                 <div className={styles.inputForm}>
-                    <input type="email" className={styles.input} />
+                    <input type="email" className={styles.input} placeholder="Enter your email" />
                     <button htmlFor="" className={styles.btn}>Enter</button>
                 </div>
             </div>

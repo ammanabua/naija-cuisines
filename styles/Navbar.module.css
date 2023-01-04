@@ -1,5 +1,5 @@
 .container {
-    height: 100px;
+    height: 70px;
     padding: 0px 50px;
     background-color: #EC770A;
     display: flex;
@@ -13,7 +13,7 @@
     width: 80%;
     margin: auto;
     top: 30px;
-    border-radius: 18px; 
+    border-radius: 24px; 
 }
 
 .item{
@@ -67,6 +67,10 @@
     font-size: 18px;
     font-weight: 400;
     cursor: pointer;
+}
+
+.logo {
+    border-radius: 5px;
 }
 
 

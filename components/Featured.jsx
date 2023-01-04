@@ -5,8 +5,8 @@ import { useState } from "react";
 
 const images = [
     "/img/featured.jpg",
-    "/img/featured2.jpg",
-    "/img/featured3.jpg",
+    "/img/bg2.png",
+    "/img/bg3.png",
     "/img/featured4.jpg",
 ]
 

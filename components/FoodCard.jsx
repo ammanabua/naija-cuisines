@@ -11,7 +11,7 @@ const FoodCard = ({ food }) => {
         <Link href={`/product/${food._id}`} passHref>
           <div className={styles.cardHead}>
             <h1 className={styles.title}>{food.title}</h1>
-            <span className={styles.price}>{food.prices[0]}</span>
+            <span className={styles.price}>&#8358;{food.prices[0]}</span>
           </div>
         </Link>
         

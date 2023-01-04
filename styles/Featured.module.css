@@ -67,11 +67,11 @@
     border-radius: 4px;
     background-color: #EC770A;
     border: none;
-    color: black;
+    color: white;
     text-align: center;
     font-size: 28px;
     padding: 20px;
-    width: 200px;
+    width: 150px;
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;

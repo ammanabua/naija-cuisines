@@ -17,7 +17,7 @@ const SpecialRequest = () => {
                     </div>
                     <div className={styles.articleText}>
                     <p className={styles.text} >
-                        Do you have special dietary requirements? Tell us how you want your meal cooked, and with what.
+                        Do you have special dietary requirements? <br />Tell us how you want your meal cooked, and with what.
                         <br />
                     </p>
 
