@@ -8,6 +8,8 @@ import AddButton from '../components/AddButton'
 import Featured from '../components/Featured'
 import FoodList from '../components/FoodList'
 import Services from '../components/Services'
+import SpecialRequest from '../components/SpecialRequest'
+import Subscribe from '../components/Subscribe'
 import styles from '../styles/Home.module.css'
 
 
@@ -32,7 +34,8 @@ export default function Home({ foodList, admin }) {
       <FoodList foodList={foodList} />
       {!close && <Add setClose={setClose} />}
 
-      
+      <SpecialRequest />
+      <Subscribe />
 
     </div>
   )

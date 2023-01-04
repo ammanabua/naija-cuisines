@@ -5,8 +5,9 @@
     height: 100vh;
     display: flex;
     position: relative;
-    width: 70%;
+    width: 100%;
     margin: auto;
+    background-color: #A7D371;
 }
 
 
@@ -18,20 +19,19 @@
 }
 
 .left{
+    height: 100vh;
     margin-right: 20px;
-    width: 100%
+    width: 100%;
+    background-image: url("/img/special.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 
 .right{
     margin-left: 20px;
     width: 80%;
-}
-
-.img{
-    position: relative;
-    height: 800px;
-    border-radius: 12px;
 }
 
 .article {
@@ -45,17 +45,20 @@
 .articleHead {
     font-size: 78px;
     font-family: 'Arizonia', cursive;
-    color: #0D2149;
+    color: white;
 }
 
 .text {
     margin-bottom: 50px;
+    font-size: 18px;
+
 }
 
 .btn {
     border: none;
     outline: none;
-    background-color: #F9A620;
+    background-color: #F13313;
+    color: white;
     padding: 15px;
     border-radius: 8px;
     font-family: inherit;
@@ -64,4 +67,5 @@
 
 .btn:hover {
     background: none;
+    color: black;
 }

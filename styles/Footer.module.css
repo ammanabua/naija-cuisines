@@ -1,6 +1,11 @@
 .container {
-    height: 40vh;
+    height: 50vh;
     background-color: #222;
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
     display: flex;
 }
 
@@ -36,6 +41,15 @@
 
 .motto {
     color: rgb(211, 211, 211)
+}
+
+.bottom {
+    display: flex;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
 }
 
 @media screen and (max-width: 480px) {

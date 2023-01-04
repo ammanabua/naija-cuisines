@@ -8,10 +8,13 @@ const FoodCard = ({ food }) => {
         <Link href={`/product/${food._id}`} passHref>
           <Image className={styles.img} src={food.img} alt="" width="500" height="500" />
         </Link>
-        <div className={styles.cardHead}>
-          <h1 className={styles.title}>{food.title}</h1>
-          <span className={styles.price}>{food.prices[0]}</span>
-        </div>
+        <Link href={`/product/${food._id}`} passHref>
+          <div className={styles.cardHead}>
+            <h1 className={styles.title}>{food.title}</h1>
+            <span className={styles.price}>{food.prices[0]}</span>
+          </div>
+        </Link>
+        
         
         <p className={styles.desc}>
             {food.desc}
