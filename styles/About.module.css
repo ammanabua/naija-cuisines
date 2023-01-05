@@ -48,6 +48,13 @@
     color: #0D2149;
 }
 
+.articleHead2{
+    font-size: 48px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    top: 190px;
+    position: absolute;
+}
+
 .text {
     margin-bottom: 50px;
 }

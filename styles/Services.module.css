@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+
 .container {
     height: 100vh;
     margin-top: 10px;
@@ -29,12 +31,11 @@
 
 .wrapper{
     width: 100%;
-    padding: 100px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     z-index: 3;
 }
 
@@ -46,14 +47,15 @@
 }
 
 .serviceItem{
-    border: 1px aquamarine solid;
+    margin: 5px;
     background-color: white;
 }
 
 
 .header{
     color: white;
-    font-size: 36px;
+    font-size: 76px;
+    font-family: "Arizonia", cursive;
 }
 
 .img {

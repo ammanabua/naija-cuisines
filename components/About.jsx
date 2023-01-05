@@ -13,11 +13,16 @@ const About = () => {
             <div className={styles.right}>
                 <article className={styles.article}>
                     <div className={styles.articleHead}>
-                    About Us
+                    About
+                    </div>
+                    <div className={styles.articleHead2}>
+                        Taval
+                        <br /> 
+                        Cuisiniere
                     </div>
                     <div className={styles.articleText}>
                     <p className={styles.text} >
-                        At Taval Cuisiniere, we are dedicted to presenting exceptional food, regardless of whether it implies going the additional mile. We have been accustomed to delivering excellence since 1998.
+                        From a small place since 1998 dedicted to presenting exceptional food, regardless of whether it implies going the additional mile. We have a reputation of delivering excellence.
                         <br />
                         Our continental dishes are cooked fresh and to your requirements. Taval Cuisiniere offers the best food, curates exceptional events and deliver your meals with a personal touch. 
                         <br />

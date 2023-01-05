@@ -20,7 +20,7 @@ const FoodCard = ({ food }) => {
             {food.desc}
         </p>
         <Link href={`/product/${food._id}`} passHref>
-          <button className={styles.btn}>Buy Now</button>
+          <button className={styles.btn}>Order</button>
         </Link>
     </div>
   )

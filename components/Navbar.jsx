@@ -24,20 +24,41 @@ const Navbar = () => {
           <Link href="/" passHref>
             <li className={styles.listItem}>Home</li>
           </Link>
-          <li className={styles.listItem}>Menu</li>
+          <Link href="/menu" passHref>
+            <li className={styles.listItem}>About</li>
+          </Link>
+          <Link href="/menu" passHref>
+            <li className={styles.listItem}>Menu</li>
+          </Link>
+          
           <Image src="/img/taval-logo.png" alt="" width="60" height="60" className={styles.logo} />
-          <li className={styles.listItem}>Services</li>
-          <li className={styles.listItem}>Contact</li>
+          <Link href='/services' passHref>
+            <li className={styles.listItem}>Services</li>
+          </Link>
+          <Link href='/contact' passHref>
+            <li className={styles.listItem}>Contact</li>
+          </Link>
+          <Link href='/blog' passHref>
+            <li className={styles.listItem}>Stories</li>
+          </Link>
+          
         </ul>
       </div>
-      <Link href="/cart" passHref>
-        <div className={styles.item}>
-          <div className={styles.cart}>
-            <Image src="/img/cart.png" alt="" width="30" height="30" />
-            <div className={styles.counter}>{quantity}</div>
-          </div>
+      <div className={styles.item}>
+        <div className={styles.wrapper}>
+          <Link href="/user" passHref>
+            <div className={styles.user}>
+              <Image src="/img/user1.png" alt="" width="25" height="25" />
+            </div>
+          </Link>
+          <Link href="/cart" passHref>
+            <div className={styles.cart}>
+              <Image src="/img/cart.png" alt="" width="30" height="30" />
+              <div className={styles.counter}>{quantity}</div>
+            </div>
+          </Link>
         </div>
-      </Link>
+      </div>
     </div>
   )
 }

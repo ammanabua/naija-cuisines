@@ -3,7 +3,7 @@ import FoodCard from "./FoodCard"
 
 const FoodList = ({ foodList }) => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <h1 className={styles.title}>THE BEST <span className={styles.tav}>CUISINE</span> IN ABUJA</h1>
       <p className={styles.desc}>
         We offer you fresh delicious meals. Catered with skill & professionalism from Taval.
@@ -13,7 +13,7 @@ const FoodList = ({ foodList }) => {
           <FoodCard key={food._id} food={food} />
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

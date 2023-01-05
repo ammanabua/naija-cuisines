@@ -17,17 +17,17 @@ const Services = () => {
                 <div className={styles.serviceItem}>
                     <div className={styles.image}>
                         <Link href="/services" passHref>
-                            <Image className={styles.img} src="/img/bg.jpg" alt="" width="300" height="300" />
+                            <Image className={styles.img} src="/img/delivery.png" alt="" width="200" height="200" />
                         </Link> 
                     </div>
                     <div className={styles.title}>
-                        <h3>Meal Delivery</h3>
+                        <h3>Food Delivery & Takeout</h3>
                     </div>
                 </div>
                 <div className={styles.serviceItem}>
                     <div className={styles.image}>
                         <Link href="/services" passHref>
-                            <Image className={styles.img} src="/img/bg.jpg" alt="" width="300" height="300" />
+                            <Image className={styles.img} src="/img/restaurant.png" alt="" width="200" height="200" />
                         </Link> 
                     </div>
                     <div className={styles.title}>
@@ -37,7 +37,7 @@ const Services = () => {
                 <div className={styles.serviceItem}>
                     <div className={styles.image}>
                         <Link href="/services" passHref>
-                            <Image className={styles.img} src="/img/bg.jpg" alt="" width="300" height="300" />
+                            <Image className={styles.img} src="/img/catering.png" alt="" width="200" height="200" />
                         </Link> 
                     </div>
                     <div className={styles.title}>
