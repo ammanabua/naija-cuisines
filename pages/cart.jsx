@@ -53,16 +53,15 @@ const Cart = () => {
                 address_line_1: "Ezimba Street"
             }
         }
-        console.log(reference);
 
         createOrder({
             customer:shipping.name.full_name,
             address: shipping.address.address_line_1,
-            phone: "09059646709",
+            telephone: 9059646709,
             total: cart.total,
             method: 0,
         
-        })
+        });
 
       console.log(reference);
     };

@@ -7,7 +7,7 @@
     position: relative;
     width: 100%;
     margin: auto;
-    background-color: white;
+    background-color: black;
 }
 
 
@@ -45,13 +45,14 @@
 .articleHead {
     font-size: 78px;
     font-family: 'Arizonia', cursive;
-    color: black;
+    color: white;
 }
 
 .text {
     margin-bottom: 50px;
     font-size: 18px;
     width: 80%;
+    color: white;
 
 }
 
@@ -68,5 +69,6 @@
 
 .btn:hover {
     background: none;
-    color: black;
+    border: 1px solid white;
+    color: white;
 }

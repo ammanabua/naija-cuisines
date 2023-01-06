@@ -5,6 +5,7 @@ import Link from "next/link";
 const FoodCard = ({ food }) => {
   return (
     <div className={styles.container}>
+      <div className={styles.wrapper}>
         <Link href={`/product/${food._id}`} passHref>
           <Image className={styles.img} src={food.img} alt="" width="500" height="500" />
         </Link>
@@ -14,11 +15,13 @@ const FoodCard = ({ food }) => {
             <span className={styles.price}>&#8358;{food.prices[0]}</span>
           </div>
         </Link>
+      </div>
+        
         <p className={styles.desc}>
             {food.desc}
         </p>
         <Link href={`/product/${food._id}`} passHref>
-          <button className={styles.btn}>Order</button>
+          <button className={styles.btn}>Order Now</button>
         </Link>
     </div>
   )
