@@ -82,10 +82,11 @@
     width: 100px;
     justify-content: center;
     align-items: center;
+    height: 35px;
 }
 
 .user {
-    margin-right: 10px;
+    margin-right: 10px; 
 }
 
 .cart{

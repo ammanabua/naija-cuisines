@@ -14,8 +14,6 @@ const FoodCard = ({ food }) => {
             <span className={styles.price}>&#8358;{food.prices[0]}</span>
           </div>
         </Link>
-        
-        
         <p className={styles.desc}>
             {food.desc}
         </p>

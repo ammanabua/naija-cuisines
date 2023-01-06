@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.callButton}>
-          <Image src="/img/phone.png" alt="" width="32" height="32" />
+          <Image src="/img/phone.png" alt="" width="30" height="30" />
         </div>
         <div className={styles.texts}>
           <div className={styles.text}>ORDER NOW!</div>
@@ -48,12 +48,12 @@ const Navbar = () => {
         <div className={styles.wrapper}>
           <Link href="/user" passHref>
             <div className={styles.user}>
-              <Image src="/img/user1.png" alt="" width="25" height="25" />
+              <Image src="/img/user1.png" alt="" width="20" height="20" />
             </div>
           </Link>
           <Link href="/cart" passHref>
             <div className={styles.cart}>
-              <Image src="/img/cart.png" alt="" width="30" height="30" />
+              <Image src="/img/cart.png" alt="" width="25" height="25" />
               <div className={styles.counter}>{quantity}</div>
             </div>
           </Link>
