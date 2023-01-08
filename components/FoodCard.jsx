@@ -17,12 +17,12 @@ const FoodCard = ({ food }) => {
         </Link>
       </div>
         
-        <p className={styles.desc}>
-            {food.desc}
-        </p>
-        <Link href={`/product/${food._id}`} passHref>
-          <button className={styles.btn}>Order Now</button>
-        </Link>
+      <p className={styles.desc}>
+          {food.desc}
+      </p>
+      <Link href={`/product/${food._id}`} passHref>
+        <button className={styles.btn}>Order Now</button>
+      </Link>
     </div>
   )
 }

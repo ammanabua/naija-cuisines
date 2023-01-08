@@ -21,24 +21,24 @@ const Navbar = () => {
 
       <div className={styles.item}>
         <ul className={styles.list}>
-          <Link href="/" passHref>
+          <Link href="/#home" passHref>
             <li className={styles.listItem}>Home</li>
           </Link>
-          <Link href="/menu" passHref>
+          <Link href="/#about" passHref>
             <li className={styles.listItem}>About</li>
           </Link>
-          <Link href="/menu" passHref>
+          <Link href="/#menu" passHref>
             <li className={styles.listItem}>Menu</li>
           </Link>
           
           <Image src="/img/taval-logo.png" alt="" width="60" height="60" className={styles.logo} />
-          <Link href='/services' passHref>
+          <Link href='/#services' passHref>
             <li className={styles.listItem}>Services</li>
           </Link>
-          <Link href='/contact' passHref>
+          <Link href='/#contact' passHref>
             <li className={styles.listItem}>Contact</li>
           </Link>
-          <Link href='/blog' passHref>
+          <Link href='/#blog' passHref>
             <li className={styles.listItem}>Stories</li>
           </Link>
           

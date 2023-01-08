@@ -25,17 +25,16 @@ export default function Home({ foodList, admin }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Featured />
+      <Featured id="home" />
 
-      <About />
+      <About id="about" />
 
-      <Services />
-      {admin && <AddButton setClose={setClose} />}
-      <FoodList foodList={foodList} />
-      {!close && <Add setClose={setClose} />}
+      <Services id="services" />
+      
+      <FoodList foodList={foodList} id="menu" />
 
-      <SpecialRequest />
-      <Subscribe />
+      <SpecialRequest id="special" />
+      <Subscribe id="subscribe" />
 
     </div>
   )

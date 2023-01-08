@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import styles from "../../styles/Admin.module.css"
 import Image from "next/image"
 import axios from 'axios'
+import AddButton from '../../components/AddButton'
+import Add from '../../components/Add'
 
 const Index = ({ orders, products }) => {
 
     const [foodList, setFoodList] = useState(products);
     const [orderList, setOrderList] = useState(orders);
+
+    const [close, setClose] = useState(true);
 
     const status = ["preparing", "on the way", "delivered"]
 
@@ -72,6 +76,8 @@ const Index = ({ orders, products }) => {
                     </tbody>
                 ))}
             </table>
+            <AddButton setClose={setClose} />
+            {!close && <Add setClose={setClose} />}
         </div>
         <div className={styles.item}>
             <h1 className={styles.title}>Orders</h1>
