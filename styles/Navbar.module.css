@@ -71,7 +71,7 @@
 }
 
 .logo {
-    
+
 }
 
 .wrapper {
@@ -86,11 +86,15 @@
 
 .user {
     margin-right: 10px; 
+    cursor: pointer;
 }
 
 .cart{
     position: relative;
+    cursor: pointer;
 }
+
+
 
 .counter{
     position: absolute;
@@ -134,7 +138,7 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     .container{
-    
+
     }
 
     .text:first-child{

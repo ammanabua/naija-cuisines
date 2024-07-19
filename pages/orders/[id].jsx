@@ -70,7 +70,7 @@ const Order = ({ order }) => {
                     </div>
                 </div>
                 <div className={statusClass(3)}>
-                    <Image src="/img/paid.png" width={30} height={30} alt="" />
+                    <Image src="/img/take-away.png" width={30} height={30} alt="" />
                     <span>Delivered</span>
                     <div className={styles.checkedIcon}>
                         <Image className={styles.checkedIcon} src="/img/check.png" width={20} height={20} alt="" />     

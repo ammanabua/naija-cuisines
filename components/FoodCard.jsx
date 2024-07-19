@@ -1,8 +1,12 @@
 import styles from "../styles/FoodCard.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const FoodCard = ({ food }) => {
+  
+  const [open, setOpen] = useState(false);
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>

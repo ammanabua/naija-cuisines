@@ -1,7 +1,18 @@
 .container{
-    margin: 150px;
+    margin: 50px;
     display: flex;
 
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    justify-content: center;
+}
+
+.title{
+    padding-left: 50px;
 }
 
 .left{
@@ -52,6 +63,12 @@
     color: black;
     border-radius: 5px;
     border: 2px solid grey;
+}
+
+.totalText{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
 }
 
 .totalTextTitle{

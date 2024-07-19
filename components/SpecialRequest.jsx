@@ -11,7 +11,7 @@ const SpecialRequest = () => {
                 
             </div>
             <div className={styles.right}>
-                <article className={styles.article}>
+                <div className={styles.article}>
                     <div className={styles.articleHead}>
                     Special Orders
                     </div>
@@ -21,11 +21,26 @@ const SpecialRequest = () => {
                         <br />
                     </p>
 
-                    <Link href="/" passHref>
-                        <button className={styles.btn}>Custom Order</button>
-                    </Link>
+                    <form className={styles.form}>
+                        <div className={styles.formHead}>
+                            <h1 className={styles.formTitle}>Place an order</h1>
+                        </div>
+                        <div className={styles.formItem}>
+                            <input className={styles.input} type="text" placeholder='Name' />
+                            
+                            
+                            <input type="tel" name="telephone" placeholder='Phone Number' id="" className={styles.input} />
+                        </div>
+
+                        <div className={styles.formItem}>
+                            <input type="text" name="" id="" placeholder='Meal' className={styles.input} />
+                            <input type="text" name="" id="" placeholder='Extras' className={styles.input} />
+                        </div>
+                        <textarea className={styles.input} name="" id="" cols="30" rows="5" placeholder='Instructions'></textarea>
+                        <button type='submit' className={styles.btn}>Submit</button>
+                    </form>
                     </div>
-                </article>
+                </div>
             </div>
         </div>
     </section>

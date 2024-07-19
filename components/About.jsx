@@ -22,9 +22,9 @@ const About = () => {
                     </div>
                     <div className={styles.articleText}>
                     <p className={styles.text} >
-                        From a small place since 1998 dedicted to presenting exceptional food, regardless of whether it implies going the additional mile. We have a reputation of delivering excellence.
+                        From humble beginnings since 1992, we have been dedicted to presenting exceptional food, regardless of whether it implies going the additional mile. We have a reputation of delivering excellence.
                         <br />
-                        Our continental dishes are cooked fresh and to your requirements. Taval Cuisiniere offers the best food, curates exceptional events and deliver your meals with a personal touch. 
+                        Our local and continental dishes are cooked fresh and to your requirements. We offer the best food, curate exceptional events and deliver your meals with a personal touch. 
                         <br />
                     </p>
 

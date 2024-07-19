@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const MONGO_URL = process.env.MONGO_URL
+const MONGO_URL = process.env.MONGO_URL_LOCAL;
 
 if (!MONGO_URL) {
   throw new Error(
@@ -29,6 +29,7 @@ async function dbConnect() {
       bufferCommands: false,
     }
 
+    mongoose.set('strictQuery', false);
     cached.promise = mongoose.connect(MONGO_URL, opts).then((mongoose) => {
       return mongoose
     })

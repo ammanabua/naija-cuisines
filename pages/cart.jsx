@@ -27,7 +27,7 @@ const Cart = () => {
 
             if (res.status === 201) {
                 dispatch(reset());
-                router.push(`/orders/${res.data._id}`)
+                router.push(`/orders/${res.data._id}`);
             }
         } catch(err) {
             console.log(err)
@@ -90,7 +90,7 @@ const Cart = () => {
         <>
             <div className={styles.left}>
                 <table className={styles.table}>
-                    <tbody>
+                    <thead>
                         <tr className={styles.trTitle}>
                             <th>Product</th>
                             <th>Name</th>
@@ -99,7 +99,7 @@ const Cart = () => {
                             <th>Quantity</th>
                             <th>Total</th>
                         </tr>
-                    </tbody>
+                    </thead>
                     <tbody>
                         {cart.products.map((product) => (
                             <tr className={styles.tr} key={product._id}>
@@ -174,7 +174,7 @@ console.log(cart);
   return (
     <>
         <div className={styles.main}>
-            <h1 className={styles.title}> Your Shopping Cart</h1>
+            <h1 className={styles.title}>Shopping Cart</h1>
 
             <div className={styles.container}>
                 { !cart.products.length ? <EmptyCart /> : <FilledCart />}

@@ -1,4 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { useEffect } from "react";
+
+
+
+// const products = localStorage.getItem('cartList') !== null ? JSON.parse(localStorage.getItem('cartList')) : [];
+//
+// const quantity = localStorage.getItem('cartQuantity') !== null ? JSON.parse(localStorage.getItem('cartQuantity')) : 0;
+//
+// const total = localStorage.getItem('cartTotal') !== null ? JSON.parse(localStorage.getItem('cartTotal')) : 0;
+//
+// const setCartList = (products, quantity, total) => {
+//     localStorage.setItem('cartList', JSON.stringify(products));
+//     localStorage.setItem('cartQuantity', JSON.stringify(quantity));
+//     localStorage.setItem('cartTotal', JSON.stringify(total))
+// }
+
 
 const cartSlice = createSlice({
     name: "cart",
@@ -12,6 +28,13 @@ const cartSlice = createSlice({
             state.products.push(action.payload);
             state.quantity += 1;
             state.total += action.payload.price * action.payload.quantity;
+
+
+            setCartList(
+                state.products.map((product) => product),
+                state.quantity,
+                state.total
+            )
         },
         reset: (state) => {
             state.products = [];
@@ -20,6 +43,10 @@ const cartSlice = createSlice({
         },
     },
 });
+
+
+
+
 
 export const { addProduct, reset } = cartSlice.actions;
 

@@ -40,14 +40,19 @@
 }
 
 .service {
-    width: 70%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .serviceItem{
-    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
     background-color: white;
 }
 
@@ -60,8 +65,13 @@
 
 .img {
     position: relative;
+    opacity: 0.6;
 }
 
 .title {
     color: black;
+}
+
+.text{
+    text-align: center;
 }

@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const quantity = useSelector(state => state.cart.quantity);
   return (
-    <div className={styles.container}>
+    < div className={styles.container}>
       <div className={styles.item}>
         <div className={styles.callButton}>
           <Image src="/img/phone.png" alt="" width="30" height="30" />
@@ -31,7 +31,7 @@ const Navbar = () => {
             <li className={styles.listItem}>Menu</li>
           </Link>
           
-          <Image src="/img/taval-logo.png" alt="" width="60" height="60" className={styles.logo} />
+          <Image src="/img/logo.png" alt="" width="90" height="60" className={styles.logo} />
           <Link href='/#services' passHref>
             <li className={styles.listItem}>Services</li>
           </Link>

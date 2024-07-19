@@ -2,10 +2,12 @@ import styles from "../styles/Featured.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react'
+
 
 const images = [
-    "/img/featured.jpg",
-    "/img/bg2.png",
+    "/img/jollof.jpg",
+    "/img/serv.jpg",
     "/img/bg3.png",
     "/img/featured4.jpg",
 ]
