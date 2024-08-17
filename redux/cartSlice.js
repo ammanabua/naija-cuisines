@@ -28,13 +28,6 @@ const cartSlice = createSlice({
             state.products.push(action.payload);
             state.quantity += 1;
             state.total += action.payload.price * action.payload.quantity;
-
-
-            setCartList(
-                state.products.map((product) => product),
-                state.quantity,
-                state.total
-            )
         },
         reset: (state) => {
             state.products = [];
