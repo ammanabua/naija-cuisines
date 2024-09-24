@@ -20,9 +20,9 @@ export default function Home({ foodList, admin }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Taval Cuisiniére</title>
-        <meta name="description" content="Best home-made meals in Abuja" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Naija Cusines</title>
+        <meta name="description" content="Showcasing the best of Nigerian Food for your pleasure" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
       </Head>
 
       <Featured id="home" />

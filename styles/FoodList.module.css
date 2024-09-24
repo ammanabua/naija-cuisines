@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    width: 100%;
+    width: 80%;
 }
 
 .title{
@@ -29,9 +29,14 @@
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
+}
 
+.foodList{
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 @media screen and (max-width: 480px) {

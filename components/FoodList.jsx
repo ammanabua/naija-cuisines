@@ -8,11 +8,14 @@ const FoodList = ({ foodList }) => {
       <p className={styles.desc}>
         We offer you fresh delicious meals. Catered with skill & professionalism from Taval.
       </p>
-      <div className={styles.wrapper}>
-        {foodList.map((food) => (
-          <FoodCard key={food._id} food={food} />
-        ))}
-      </div>
+
+        <div className={styles.wrapper}>
+            <div className={styles.foodList}>
+                {foodList.map((food) => (
+                    <FoodCard food={food} key={food._id}/>
+                ))}
+            </div>
+        </div>
     </section>
   )
 }
