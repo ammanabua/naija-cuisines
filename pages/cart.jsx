@@ -48,10 +48,10 @@ const Cart = () => {
       // Implementation for whatever you want to do with reference and after success call.
         const shipping = {
             name:{
-                full_name: "Jimmy Carter"
+                full_name: "Lily Owei"
             },
             address: {
-                address_line_1: "Ezimba Street"
+                address_line_1: "2040 Market Street"
             }
         }
 
